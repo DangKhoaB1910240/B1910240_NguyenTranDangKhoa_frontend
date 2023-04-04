@@ -1,11 +1,3 @@
-<script>
-import AppHeader from "@/components/AppHeader.vue";
-export default {
-  components: {
-    AppHeader,
-  },
-};
-</script>
 <template>
   <div id="app">
     <AppHeader />
@@ -14,9 +6,34 @@ export default {
     </div>
   </div>
 </template>
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+export default {
+  components: {
+    AppHeader,
+  },
+  data() {
+    return {
+      component: "Login",
+    };
+  },
+  methods: {
+    loginF() {
+      this.component = "Login";
+    },
+    RegisterF() {
+      this.component = "Register";
+    },
+  },
+};
+</script>
+
 <style>
 .page {
   max-width: 400px;
   margin: auto;
+}
+nav {
+  display: none;
 }
 </style>

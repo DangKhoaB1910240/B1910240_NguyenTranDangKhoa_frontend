@@ -19,6 +19,16 @@ const routes = [
     props: true // Truyền các biến trong $route.params vào làm props
   },
   {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/views/Login.vue"),
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    component: () => import("@/views/Logout.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "notfound",
     component: () => import("@/views/NotFound.vue"),
